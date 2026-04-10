@@ -44,6 +44,11 @@ export default function VisionExperiencePricing() {
       price: '$120',
       description: 'includes a Vision Book, a premium pen, seven phone-to-phone follow-ups, and an autographed copy of Threaded Chords of Life: An Inspirational Memoir.',
     },
+    {
+      name: 'Diamond',
+      price: '$150',
+      description: 'includes a Vision Book, a premium pen, eight phone-to-phone follow-ups, and an autographed copy of Threaded Chords of Life: An Inspirational Memoir plus a personalized video message.',
+    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
