@@ -14,27 +14,27 @@ export default function VisionExperiencePricing() {
     {
       name: 'Silver',
       price: '$95',
-      description: 'includes a polaroid photo and a premium pen.',
-    },
-    {
-      name: 'Gold',
-      price: '$105',
-      description: 'includes a polaroid photo, a premium pen, and one phone-to-phone follow-up.',
-    },
-    {
-      name: 'Platinum',
-      price: '$110',
       description: 'includes a polaroid photo, a premium pen, and one electronic follow-up.',
     },
     {
       name: 'Diamond',
       price: '$120',
-      description: 'includes a polaroid photo, a premium pen, and two electronic follow-ups.',
+      description: 'includes a polaroid photo, a premium pen, and three electronic follow-ups.',
+    },
+    {
+      name: 'Gold',
+      price: '$105',
+      description: 'includes a polaroid photo and a premium pen.',
+    },
+    {
+      name: 'Platinum',
+      price: '$110',
+      description: 'includes a polaroid photo, a premium pen, and one phone-to-phone follow-up.',
     },
     {
       name: 'Pearl',
       price: '$135',
-      description: 'includes a polaroid photo, a premium pen, and three electronic follow-ups.',
+      description: 'includes a polaroid photo, a premium pen, and two electronic follow-ups.',
     },
     {
       name: 'Emerald',
