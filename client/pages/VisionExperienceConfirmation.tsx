@@ -4,13 +4,6 @@ import Layout from "@/components/Layout";
 export default function VisionExperienceConfirmation() {
   return (
     <Layout>
-      {/* Page banner */}
-      <div className="bg-jade py-5 text-center">
-        <h1 className="text-white text-2xl font-bold font-inter">
-          Vision Experience
-        </h1>
-      </div>
-
       {/* Confirmation content */}
       <section className="bg-white py-24 flex flex-col items-center text-center px-4">
         <h2 className="text-3xl font-bold font-inter text-[#32264D] mb-6">
