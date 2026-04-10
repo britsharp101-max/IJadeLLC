@@ -52,10 +52,15 @@ export default function About() {
 
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/ab24b6fd3e11f589aa0a0393e091aa84f56b09fa?width=946"
-                alt="iJADE Story"
-                className="w-full h-auto object-cover"
+              <iframe
+                width="100%"
+                height="400"
+                src="https://www.youtube.com/embed/ffttt0NqFGo"
+                title="iJADE Story"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-auto rounded-lg"
               />
             </div>
             <div>
