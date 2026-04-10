@@ -13,7 +13,9 @@ import VisionExperienceForm from "./pages/VisionExperienceForm";
 import Books from "./pages/Books";
 import Contact from "./pages/Contact";
 import VirtualAssistant from "./pages/VirtualAssistant";
+import VirtualAssistantForm from "./pages/VirtualAssistantForm";
 import EducationalConsulting from "./pages/EducationalConsulting";
+import EducationalConsultingForm from "./pages/EducationalConsultingForm";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,7 +36,9 @@ export default function App() {
             <Route path="/books" element={<Books />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/service" element={<EducationalConsulting />} />
+            <Route path="/educational-consulting-form" element={<EducationalConsultingForm />} />
             <Route path="/virtual-assistant" element={<VirtualAssistant />} />
+            <Route path="/virtual-assistant-form" element={<VirtualAssistantForm />} />
             <Route path="/educational-consulting" element={<EducationalConsulting />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
