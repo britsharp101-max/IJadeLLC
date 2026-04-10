@@ -66,7 +66,7 @@ export default function VisionExperience() {
             </div>
             <div className="flex justify-center">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/3a5466c6131c6428b743ba614e50671656f836dd?width=776"
+                src="https://cdn.builder.io/api/v1/image/assets%2Fe3a3852c609b48f4bbc0e1bbcd09c40d%2Fa525b9676da74acaa095ed88fe2df852?format=webp&width=800&height=1200"
                 alt="Vision Experience"
                 className="w-full max-w-md h-auto"
               />
