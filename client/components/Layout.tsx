@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 const SERVICE_LINKS = [
   { path: '/educational-consulting', label: 'Educational Consulting' },
   { path: '/vision-experience', label: 'Vision Experience' },
-  { path: '/virtual-assistant', label: 'Virtual Assistant' },
+  { path: '/virtual-assistant', label: 'Virtual Assistant Services' },
 ];
 
 function ServicesDropdown({ isActive }: { isActive: boolean }) {
