@@ -27,7 +27,7 @@ export default function VirtualAssistantForm() {
 
   const onSubmit = (data: VirtualAssistantFormData) => {
     console.log(data);
-    navigate("/virtual-assistant");
+    navigate("/virtual-assistant-confirmation");
   };
 
   return (

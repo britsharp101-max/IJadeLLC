@@ -18,6 +18,7 @@ import BooksConfirmation from "./pages/BooksConfirmation";
 import Contact from "./pages/Contact";
 import VirtualAssistant from "./pages/VirtualAssistant";
 import VirtualAssistantForm from "./pages/VirtualAssistantForm";
+import VirtualAssistantConfirmation from "./pages/VirtualAssistantConfirmation";
 import EducationalConsulting from "./pages/EducationalConsulting";
 import EducationalConsultingForm from "./pages/EducationalConsultingForm";
 import Auth from "./pages/Auth";
@@ -50,6 +51,7 @@ export default function App() {
             <Route path="/educational-consulting-form" element={<EducationalConsultingForm />} />
             <Route path="/virtual-assistant" element={<VirtualAssistant />} />
             <Route path="/virtual-assistant-form" element={<VirtualAssistantForm />} />
+            <Route path="/virtual-assistant-confirmation" element={<VirtualAssistantConfirmation />} />
             <Route path="/educational-consulting" element={<EducationalConsulting />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
