@@ -5,68 +5,55 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Navigation links configuration
+  const navLinks = [
+    { path: '/', label: 'Home' },
+    { path: '/service', label: 'Service' },
+    { path: '/books', label: 'Books' },
+    { path: '/about', label: 'About' },
+    { path: '/contact', label: 'Contact' },
+  ];
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Navbar */}
       <nav className="bg-white border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between h-20">
+          {/* Logo and Brand */}
+          <Link to="/" className="flex items-center gap-3 flex-shrink-0">
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/c44ca2e57ba0f9cce8a187b887727a22ab9746c7?width=166"
               alt="iJADE Logo"
               className="w-12 h-12"
             />
-            <span className="font-bold text-xl text-jade">iJADE, LLC</span>
+            <span className="font-bold text-2xl text-jade hidden sm:inline">iJADE, LLC</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link
-              to="/"
-              className={`text-base font-medium transition-colors ${
-                isActive('/') ? 'text-jade font-semibold' : 'text-gray-700 hover:text-jade'
-              }`}
-            >
-              Home
-            </Link>
-            <Link
-              to="/service"
-              className={`text-base font-medium transition-colors ${
-                isActive('/service') ? 'text-jade font-semibold' : 'text-gray-700 hover:text-jade'
-              }`}
-            >
-              Service
-            </Link>
-            <Link
-              to="/books"
-              className={`text-base font-medium transition-colors ${
-                isActive('/books') ? 'text-jade font-semibold' : 'text-gray-700 hover:text-jade'
-              }`}
-            >
-              Books
-            </Link>
-            <Link
-              to="/about"
-              className={`text-base font-medium transition-colors ${
-                isActive('/about') ? 'text-jade font-semibold' : 'text-gray-700 hover:text-jade'
-              }`}
-            >
-              About
-            </Link>
-            <Link
-              to="/contact"
-              className={`text-base font-medium transition-colors ${
-                isActive('/contact') ? 'text-jade font-semibold' : 'text-gray-700 hover:text-jade'
-              }`}
-            >
-              Contact
-            </Link>
+          <div className="hidden md:flex items-center gap-12">
+            {navLinks.map(({ path, label }) => (
+              <Link
+                key={path}
+                to={path}
+                className={`text-base transition-colors whitespace-nowrap ${
+                  isActive(path)
+                    ? 'text-black font-semibold'
+                    : 'text-black font-normal hover:text-jade'
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile Menu Icon */}
           <div className="md:hidden">
-            <button className="text-gray-800 text-2xl">☰</button>
+            <button
+              className="text-gray-800 text-2xl p-2"
+              aria-label="Menu"
+            >
+              ☰
+            </button>
           </div>
         </div>
       </nav>

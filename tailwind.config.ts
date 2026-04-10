@@ -57,6 +57,8 @@ export default {
           light: "#F6E1FF",
           purple: "#E8C0F9",
         },
+        "neutral-silver": "#F5F7FA",
+        "neutral-grey": "#717171",
       },
       borderRadius: {
         lg: "var(--radius)",

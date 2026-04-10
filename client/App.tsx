@@ -8,6 +8,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import VisionExperience from "./pages/VisionExperience";
+import VisionExperiencePricing from "./pages/VisionExperiencePricing";
+import VisionExperienceForm from "./pages/VisionExperienceForm";
 import Books from "./pages/Books";
 import Contact from "./pages/Contact";
 import VirtualAssistant from "./pages/VirtualAssistant";
@@ -27,6 +29,8 @@ export default function App() {
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/vision-experience" element={<VisionExperience />} />
+            <Route path="/vision-experience-pricing" element={<VisionExperiencePricing />} />
+            <Route path="/vision-experience-form" element={<VisionExperienceForm />} />
             <Route path="/books" element={<Books />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/service" element={<EducationalConsulting />} />
