@@ -20,6 +20,7 @@ import VirtualAssistant from "./pages/VirtualAssistant";
 import VirtualAssistantForm from "./pages/VirtualAssistantForm";
 import EducationalConsulting from "./pages/EducationalConsulting";
 import EducationalConsultingForm from "./pages/EducationalConsultingForm";
+import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,8 @@ export default function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/signup" element={<Auth />} />
+            <Route path="/login" element={<Auth />} />
             <Route path="/about" element={<About />} />
             <Route path="/vision-experience" element={<VisionExperience />} />
             <Route path="/vision-experience-pricing" element={<VisionExperiencePricing />} />
