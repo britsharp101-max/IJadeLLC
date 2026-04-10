@@ -42,7 +42,10 @@ export default function EducationalConsulting() {
                 >
                   Book Workshop
                 </Link>
-                <button className="inline-block px-8 py-3 border-2 border-black text-black font-semibold rounded hover:bg-black hover:text-white transition-colors">
+                <button
+                  onClick={() => document.getElementById('workshops-section')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="inline-block px-8 py-3 border-2 border-black text-black font-semibold rounded hover:bg-black hover:text-white transition-colors"
+                >
                   View Workshop
                 </button>
               </div>
@@ -59,7 +62,7 @@ export default function EducationalConsulting() {
       </section>
 
       {/* Workshops Section */}
-      <section className="py-16 bg-white">
+      <section id="workshops-section" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-semibold text-black text-center mb-4">
             Professional Learning Workshops
