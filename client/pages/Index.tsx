@@ -57,7 +57,7 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Educational Consulting Card */}
             <Link
-              to="/about"
+              to="/educational-consulting"
               className="flex flex-col bg-neutral-silver rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
             >
               <img
