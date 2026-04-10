@@ -1,70 +1,33 @@
-import Layout from '@/components/Layout';
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import Layout from "@/components/Layout";
 
 export default function BooksConfirmation() {
   return (
     <Layout>
-      {/* Confirmation Section */}
-      <section className="bg-white py-20 md:py-32">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Checkmark Icon */}
-          <div className="mb-8 flex justify-center">
-            <div className="w-20 h-20 bg-jade rounded-full flex items-center justify-center">
-              <svg
-                className="w-12 h-12 text-white"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-          </div>
+      {/* Confirmation content */}
+      <section className="bg-white py-24 flex flex-col items-center text-center px-4">
+        <h2 className="text-3xl font-bold font-inter text-[#32264D] mb-6">
+          Thank You for Your Purchase!
+        </h2>
 
-          {/* Heading */}
-          <h1 className="text-4xl md:text-5xl font-bold text-jade mb-4">
-            Thank You!
-          </h1>
+        <p className="text-2xl font-light font-inter text-jade max-w-xl mb-12">
+          We appreciate your order! Your book will be shipped to you soon.
+        </p>
 
-          {/* Subheading */}
-          <p className="text-xl text-gray-700 mb-8">
-            Your purchase has been received.
-          </p>
-
-          {/* Book Image */}
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/6a2f90ec50975b7440af1896de313bfe5c68d534?width=260"
-            alt="Threaded Chords of Life"
-            className="w-32 h-52 object-cover mx-auto mb-8"
-          />
-
-          {/* Book Title */}
-          <p className="text-base text-gray-600 mb-12 max-w-2xl mx-auto font-semibold">
-            Threaded Chords of Life: An Inspirational Memoir
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/books"
-              className="inline-block px-8 py-3 bg-jade text-white font-semibold rounded-lg hover:opacity-90 transition-opacity"
-            >
-              Continue Shopping
-            </Link>
-            <Link
-              to="/"
-              className="inline-block px-8 py-3 border-2 border-jade text-jade font-semibold rounded-lg hover:bg-jade/5 transition-colors"
-            >
-              Return Home
-            </Link>
-          </div>
-        </div>
+        <Link
+          to="/books"
+          className="bg-[#D9D9D9] text-jade font-light font-inter text-base px-8 py-3 rounded-[18px] hover:bg-gray-300 transition-colors"
+        >
+          Continue shopping
+        </Link>
       </section>
+
+      {/* Bottom CTA */}
+      <div className="text-center py-10">
+        <p className="text-2xl font-light font-inter text-jade tracking-wide">
+          Inspire Your Journey. Order today!
+        </p>
+      </div>
     </Layout>
   );
 }
