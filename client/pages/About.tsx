@@ -51,16 +51,16 @@ export default function About() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
+            <div className="aspect-square">
               <iframe
                 width="100%"
-                height="400"
+                height="100%"
                 src="https://www.youtube.com/embed/ffttt0NqFGo"
                 title="iJADE Story"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="w-full h-auto rounded-lg"
+                className="w-full h-full rounded-lg"
               />
             </div>
             <div>
