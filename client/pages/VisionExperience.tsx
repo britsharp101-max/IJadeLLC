@@ -28,7 +28,7 @@ export default function VisionExperience() {
     },
     {
       quote: '"It Was Amazing. The Session Is Very Inspiring, And It Motivates You To Want To Be So Much Better In Life ."',
-      stars: 4,
+      stars: 5,
     },
     {
       quote: 'iJADE vision board experience gave me clarity and intention in a way I dint expect. Writing down goals for my spiritual growth, mental health, physical health, and saving money helped me slow down and truly reflect on what I need in the season of my life.',
