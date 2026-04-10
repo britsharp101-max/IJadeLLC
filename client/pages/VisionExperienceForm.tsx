@@ -9,7 +9,6 @@ interface IndividualFormData {
   firstName: string;
   lastName: string;
   package: string;
-  plan: string;
   email: string;
   phone: string;
 }
@@ -18,7 +17,6 @@ interface OrganizationFormData {
   organization: string;
   attendees: string;
   package: string;
-  plan: string;
   email: string;
   phone: string;
 }
@@ -35,13 +33,11 @@ export default function VisionExperienceForm() {
     'Silver - $95',
     'Gold - $105',
     'Platinum - $110',
-    'Emerald - $90',
-    'Pearl - $80',
-    'Ruby - $95',
-    'JADE - $120',
+    'Emerald - $150',
+    'Pearl - $135',
+    'Ruby - $165',
+    'JADE - $185',
   ];
-
-  const plans = ['Standard', 'Premium', 'Deluxe'];
 
   const onSubmit = (data: FormData) => {
     console.log('Form submitted:', { type: formType, ...data });
@@ -134,46 +130,24 @@ export default function VisionExperienceForm() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Package
-                    </label>
-                    <select
-                      {...register('package', { required: 'Please select a package' })}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jade focus:border-transparent outline-none transition"
-                    >
-                      <option value="">Select a package...</option>
-                      {packages.map((pkg) => (
-                        <option key={pkg} value={pkg}>
-                          {pkg}
-                        </option>
-                      ))}
-                    </select>
-                    {errors.package && (
-                      <p className="text-red-500 text-sm mt-1">{errors.package.message}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Plan
-                    </label>
-                    <select
-                      {...register('plan', { required: 'Please select a plan' })}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jade focus:border-transparent outline-none transition"
-                    >
-                      <option value="">Select a plan...</option>
-                      {plans.map((plan) => (
-                        <option key={plan} value={plan}>
-                          {plan}
-                        </option>
-                      ))}
-                    </select>
-                    {errors.plan && (
-                      <p className="text-red-500 text-sm mt-1">{errors.plan.message}</p>
-                    )}
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Package
+                  </label>
+                  <select
+                    {...register('package', { required: 'Please select a package' })}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jade focus:border-transparent outline-none transition"
+                  >
+                    <option value="">Select a package...</option>
+                    {packages.map((pkg) => (
+                      <option key={pkg} value={pkg}>
+                        {pkg}
+                      </option>
+                    ))}
+                  </select>
+                  {errors.package && (
+                    <p className="text-red-500 text-sm mt-1">{errors.package.message}</p>
+                  )}
                 </div>
               </>
             )}
@@ -214,46 +188,24 @@ export default function VisionExperienceForm() {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Package
-                    </label>
-                    <select
-                      {...register('package', { required: 'Please select a package' })}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jade focus:border-transparent outline-none transition"
-                    >
-                      <option value="">Select a package...</option>
-                      {packages.map((pkg) => (
-                        <option key={pkg} value={pkg}>
-                          {pkg}
-                        </option>
-                      ))}
-                    </select>
-                    {errors.package && (
-                      <p className="text-red-500 text-sm mt-1">{errors.package.message}</p>
-                    )}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Plan
-                    </label>
-                    <select
-                      {...register('plan', { required: 'Please select a plan' })}
-                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jade focus:border-transparent outline-none transition"
-                    >
-                      <option value="">Select a plan...</option>
-                      {plans.map((plan) => (
-                        <option key={plan} value={plan}>
-                          {plan}
-                        </option>
-                      ))}
-                    </select>
-                    {errors.plan && (
-                      <p className="text-red-500 text-sm mt-1">{errors.plan.message}</p>
-                    )}
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Package
+                  </label>
+                  <select
+                    {...register('package', { required: 'Please select a package' })}
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jade focus:border-transparent outline-none transition"
+                  >
+                    <option value="">Select a package...</option>
+                    {packages.map((pkg) => (
+                      <option key={pkg} value={pkg}>
+                        {pkg}
+                      </option>
+                    ))}
+                  </select>
+                  {errors.package && (
+                    <p className="text-red-500 text-sm mt-1">{errors.package.message}</p>
+                  )}
                 </div>
               </>
             )}
