@@ -25,14 +25,14 @@ export default function VisionExperiencePricing() {
       description: 'includes a polaroid photo, a premium pen, and one electronic follow-up.',
     },
     {
-      name: 'Ruby',
-      price: '$95',
-      description: 'includes a Vision Book, a premium pen, and six phone-to-phone follow-ups.',
+      name: 'Diamond',
+      price: '$120',
+      description: 'includes a polaroid photo, a premium pen, and two electronic follow-ups.',
     },
     {
       name: 'Pearl',
-      price: '$80',
-      description: 'includes a Vision Book, a premium pen, and four phone-to-phone follow-ups.',
+      price: '$135',
+      description: 'includes a polaroid photo, a premium pen, and three electronic follow-ups.',
     },
     {
       name: 'Emerald',
@@ -43,11 +43,6 @@ export default function VisionExperiencePricing() {
       name: 'JADE',
       price: '$120',
       description: 'includes a Vision Book, a premium pen, seven phone-to-phone follow-ups, and an autographed copy of Threaded Chords of Life: An Inspirational Memoir.',
-    },
-    {
-      name: 'Diamond',
-      price: '$150',
-      description: 'includes a Vision Book, a premium pen, eight phone-to-phone follow-ups, and an autographed copy of Threaded Chords of Life: An Inspirational Memoir plus a personalized video message.',
     },
   ];
 
