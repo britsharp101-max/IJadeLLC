@@ -76,7 +76,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <img
               src="https://api.builder.io/api/v1/image/assets/TEMP/c44ca2e57ba0f9cce8a187b887727a22ab9746c7?width=166"
               alt="iJADE Logo"
-              className="w-12 h-12 mr-auto"
+              className="w-12 h-12 mr-auto object-contain"
             />
             <span className="font-bold text-2xl text-jade hidden sm:inline">iJADE, LLC</span>
           </Link>

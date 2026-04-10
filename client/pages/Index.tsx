@@ -136,32 +136,6 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Sign-up CTA Section */}
-      <section className="bg-gradient-to-r from-jade to-jade/90 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold font-inter mb-4">
-            Ready to Transform Your Vision?
-          </h2>
-          <p className="text-xl font-light mb-8 max-w-2xl mx-auto">
-            Join us today and start your journey toward growth, clarity, and purposeful living.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/signup"
-              className="px-8 py-3 bg-white text-jade font-bold text-lg rounded-lg hover:bg-gray-100 transition-colors"
-            >
-              Get Started Free
-            </Link>
-            <Link
-              to="/service"
-              className="px-8 py-3 border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white hover:text-jade transition-colors"
-            >
-              Explore Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Blog Teaser Section */}
       <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

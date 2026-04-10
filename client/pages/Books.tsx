@@ -31,43 +31,43 @@ export default function Books() {
       </div>
 
       {/* Main content */}
-      <section className="bg-white py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-white py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Page heading */}
-          <h2 className="text-4xl font-bold font-inter text-black text-center mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold font-inter text-black text-center mb-8">
             Check out iJADE Books
           </h2>
 
           {/* Tagline */}
-          <p className="text-2xl font-normal font-inter text-jade text-center mb-14 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl font-normal font-inter text-jade text-center mb-16 max-w-3xl mx-auto">
             At iJADE, LLC books are created to empower growth, healing,
             clarity, and intentional living.
           </p>
 
           {/* Book cards */}
-          <div className="flex flex-col gap-10">
+          <div className="space-y-12">
             {books.map((book) => (
               <div
                 key={book.id}
-                className="flex flex-col sm:flex-row bg-white shadow-[0_4px_4px_rgba(0,0,0,0.25)] overflow-hidden"
+                className="flex flex-col md:flex-row bg-white shadow-[0_4px_4px_rgba(0,0,0,0.25)] rounded-lg overflow-hidden"
               >
-                {/* Book cover */}
-                <div className="flex-shrink-0 flex items-start justify-center p-6 sm:p-8">
+                {/* Book cover - Left side */}
+                <div className="flex-shrink-0 flex items-center justify-center p-8 md:p-12 bg-white">
                   <img
                     src={book.image}
                     alt={book.title}
-                    className="w-36 sm:w-44 h-auto object-cover"
+                    className="w-40 md:w-48 h-auto object-cover"
                   />
                 </div>
 
-                {/* Book info */}
-                <div className="flex flex-col justify-center px-6 sm:px-8 pb-8 sm:py-8 flex-1">
-                  <h3 className="text-2xl font-bold font-inter text-black mb-4 leading-snug">
+                {/* Book info - Right side */}
+                <div className="flex flex-col justify-center px-6 md:px-10 py-8 md:py-12 flex-1">
+                  <h3 className="text-2xl md:text-3xl font-bold font-inter text-black mb-6 leading-snug">
                     {book.title}
                   </h3>
                   <p
-                    className="text-lg font-normal font-inter text-black mb-6 leading-relaxed"
-                    style={{ letterSpacing: "0.075rem" }}
+                    className="text-base md:text-lg font-normal font-inter text-black mb-8 leading-relaxed"
+                    style={{ letterSpacing: "0.12px" }}
                   >
                     {book.description}
                   </p>
@@ -75,13 +75,14 @@ export default function Books() {
                   {book.cta.style === "buy" ? (
                     <Link
                       to={book.cta.href}
-                      className="inline-block bg-jade text-white text-sm font-bold font-inter px-6 py-2 rounded hover:bg-jade/90 transition-colors w-fit"
+                      className="inline-block bg-jade text-white text-sm md:text-base font-bold font-inter px-8 py-3 rounded-lg hover:bg-jade/90 transition-colors w-fit"
                     >
                       {book.cta.label}
                     </Link>
                   ) : (
                     <button
-                      className="inline-block bg-[#D9D9D9] text-black text-sm font-bold font-inter px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors w-fit"
+                      className="inline-block bg-[#D9D9D9] text-black text-sm md:text-base font-bold font-inter px-8 py-3 rounded-lg hover:bg-gray-300 transition-colors w-fit cursor-not-allowed"
+                      disabled
                     >
                       {book.cta.label}
                     </button>
