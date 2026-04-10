@@ -137,16 +137,16 @@ export default function VisionExperiencePricing() {
 
             {/* Carousel Indicators */}
             <div className="flex justify-center gap-3 mt-8">
-              {packages.map((_, index) => (
+              {[0, 1, 2].map((index) => (
                 <button
                   key={index}
                   className={`rounded-full transition-all ${
-                    index === carouselIndex
+                    index === Math.floor(carouselIndex / 3)
                       ? 'bg-black w-8 h-2'
                       : 'bg-gray-300 w-2 h-2 hover:bg-gray-400'
                   }`}
-                  onClick={() => setCarouselIndex(index)}
-                  aria-label={`Go to package ${index + 1}`}
+                  onClick={() => setCarouselIndex(index * 3)}
+                  aria-label={`Go to slide ${index + 1}`}
                 />
               ))}
             </div>
