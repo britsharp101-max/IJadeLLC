@@ -53,27 +53,26 @@ export default function VirtualAssistant() {
 
   return (
     <Layout>
+      {/* Page banner */}
+      <div className="bg-jade py-5 text-center">
+        <h1 className="text-white text-4xl font-bold font-inter">Virtual Assistant Services</h1>
+      </div>
+
       {/* Hero Section */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-2xl md:text-3xl font-bold text-black mb-6">
+              <h2 className="text-4xl font-bold font-inter text-black mb-6">
                 Create Your Vision; Achieve Your Dream!
-              </h1>
-              <p className="text-xl text-black leading-relaxed mb-8 font-light">
+              </h2>
+              <p className="text-lg font-normal font-inter text-black leading-relaxed mb-8">
                 iJADE LLC provides reliable virtual assistant services to simplify operations and support business growth. From administrative support to creative and operational tasks, flexible service packages help take daily work off your plate so you can focus on what matters most efficiently with peace of mind.
               </p>
               <div className="flex gap-4">
                 <Link
-                  to="/virtual-assistant"
-                  className="inline-block px-8 py-3 border-2 border-black text-black font-semibold rounded hover:bg-black hover:text-white transition-colors"
-                >
-                  View Plan
-                </Link>
-                <Link
                   to="/virtual-assistant-form"
-                  className="inline-block px-8 py-3 border-2 border-black text-black font-semibold rounded hover:bg-black hover:text-white transition-colors"
+                  className="inline-block px-8 py-3 bg-jade text-white font-bold font-inter rounded-lg hover:bg-jade/90 transition-colors"
                 >
                   Get Connected
                 </Link>
