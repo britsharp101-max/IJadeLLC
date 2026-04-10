@@ -12,7 +12,7 @@ export default function VisionExperiencePricing() {
     {
       name: 'Silver',
       price: '$95',
-      description: 'includes a polaroid photo, a premium pen, and one electronic follow-up.',
+      description: 'includes a polaroid photo and premium pen.',
     },
     {
       name: 'Gold',
