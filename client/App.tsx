@@ -21,6 +21,7 @@ import VirtualAssistantForm from "./pages/VirtualAssistantForm";
 import VirtualAssistantConfirmation from "./pages/VirtualAssistantConfirmation";
 import EducationalConsulting from "./pages/EducationalConsulting";
 import EducationalConsultingForm from "./pages/EducationalConsultingForm";
+import EducationalConsultingConfirmation from "./pages/EducationalConsultingConfirmation";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
@@ -49,6 +50,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/service" element={<EducationalConsulting />} />
             <Route path="/educational-consulting-form" element={<EducationalConsultingForm />} />
+            <Route path="/educational-consulting-confirmation" element={<EducationalConsultingConfirmation />} />
             <Route path="/virtual-assistant" element={<VirtualAssistant />} />
             <Route path="/virtual-assistant-form" element={<VirtualAssistantForm />} />
             <Route path="/virtual-assistant-confirmation" element={<VirtualAssistantConfirmation />} />

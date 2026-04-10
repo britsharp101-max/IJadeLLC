@@ -1,7 +1,7 @@
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
 
-export default function BooksConfirmation() {
+export default function EducationalConsultingConfirmation() {
   return (
     <Layout>
       {/* Confirmation Section */}
@@ -33,28 +33,21 @@ export default function BooksConfirmation() {
 
           {/* Subheading */}
           <p className="text-xl text-gray-700 mb-8">
-            Your purchase has been received.
+            Your workshop request has been received.
           </p>
 
-          {/* Book Image */}
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/6a2f90ec50975b7440af1896de313bfe5c68d534?width=260"
-            alt="Threaded Chords of Life"
-            className="w-32 h-52 object-cover mx-auto mb-8"
-          />
-
-          {/* Book Title */}
-          <p className="text-base text-gray-600 mb-12 max-w-2xl mx-auto font-semibold">
-            Threaded Chords of Life: An Inspirational Memoir
+          {/* Description */}
+          <p className="text-base text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+            We appreciate your interest in our professional learning workshops. Our team will review your request and get back to you shortly at the email and phone number you provided. Thank you for your business!
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/books"
+              to="/educational-consulting"
               className="inline-block px-8 py-3 bg-jade text-white font-semibold rounded-lg hover:opacity-90 transition-opacity"
             >
-              Continue Shopping
+              View Services
             </Link>
             <Link
               to="/"

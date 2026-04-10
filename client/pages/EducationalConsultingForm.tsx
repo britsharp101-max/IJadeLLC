@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 interface EducationalConsultingFormData {
   firstName: string;
@@ -11,6 +12,7 @@ interface EducationalConsultingFormData {
 }
 
 export default function EducationalConsultingForm() {
+  const navigate = useNavigate();
   const { register, handleSubmit, reset, formState: { errors } } = useForm<EducationalConsultingFormData>();
 
   const workshops = [
@@ -22,6 +24,7 @@ export default function EducationalConsultingForm() {
 
   const onSubmit = (data: EducationalConsultingFormData) => {
     console.log('Educational Consulting form submitted:', data);
+    navigate('/educational-consulting-confirmation');
     reset();
   };
 
