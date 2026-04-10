@@ -203,7 +203,7 @@ export default function VirtualAssistant() {
               <tbody>
                 {comparison.map((row, idx) => (
                   <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                    <td className="border-b border-gray-200 p-6 font-bold font-inter text-black text-base">
+                    <td className="border-b border-gray-200 p-6 font-bold font-inter text-black text-base whitespace-nowrap">
                       {row.category}
                     </td>
                     <td className="border-b border-gray-200 p-6 font-normal font-inter text-black text-base">
