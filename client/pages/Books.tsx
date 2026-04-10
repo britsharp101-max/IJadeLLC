@@ -75,7 +75,7 @@ export default function Books() {
                   {book.cta.style === "buy" ? (
                     <Link
                       to={book.cta.href}
-                      className="inline-block bg-jade text-white text-sm md:text-base font-bold font-inter px-8 py-3 rounded-lg hover:bg-jade/90 transition-colors w-fit"
+                      className="inline-block bg-jade text-white text-sm md:text-base font-inter px-8 py-3 rounded-lg hover:bg-jade/90 transition-colors w-fit"
                     >
                       {book.cta.label}
                     </Link>
