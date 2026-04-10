@@ -84,12 +84,20 @@ export default function VirtualAssistant() {
               <p className="text-xl text-black mb-8 font-light leading-relaxed">
                 iJADE, LLC provides reliable virtual assistant services to simplify operations and support business growth. From administrative support to creative and operational tasks, flexible service packages help take daily work off your plate so you can focus on what matters most efficiently with peace of mind.
               </p>
-              <Link
-                to="/virtual-assistant-form"
-                className="inline-block px-8 py-3 border-2 border-black text-black font-semibold rounded hover:bg-black hover:text-white transition-colors"
-              >
-                Get Connected
-              </Link>
+              <div className="flex gap-4">
+                <button
+                  onClick={() => document.getElementById('choose-plan')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="inline-block px-8 py-3 border-2 border-black text-black font-semibold rounded hover:bg-black hover:text-white transition-colors"
+                >
+                  View Plan
+                </button>
+                <Link
+                  to="/virtual-assistant-form"
+                  className="inline-block px-8 py-3 border-2 border-black text-black font-semibold rounded hover:bg-black hover:text-white transition-colors"
+                >
+                  Get Connected
+                </Link>
+              </div>
             </div>
             <div className="flex justify-center">
               <img
@@ -103,7 +111,7 @@ export default function VirtualAssistant() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="choose-plan" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold font-inter text-black text-center mb-4">
             Choose Your Plan
