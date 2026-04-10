@@ -25,15 +25,13 @@ const books = [
 export default function Books() {
   return (
     <Layout>
-      {/* Page banner */}
-      <div className="bg-jade py-5 text-center">
-        <h1 className="text-white text-4xl font-bold font-inter">Books</h1>
-      </div>
-
       {/* Main content */}
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Page heading */}
+          <h1 className="text-3xl md:text-4xl font-bold font-inter text-black mb-6">
+            Books
+          </h1>
           <h2 className="text-4xl md:text-5xl font-bold font-inter text-black text-center mb-8">
             Check out iJADE Books
           </h2>

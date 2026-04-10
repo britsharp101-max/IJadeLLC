@@ -77,9 +77,6 @@ export default function VirtualAssistant() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-black mb-6 font-inter">
-                Virtual Assistant Services
-              </h1>
               <h2 className="text-3xl md:text-4xl font-bold font-inter text-black mb-6 leading-tight">
                 Create Your Vision<br />
                 Achieve Your Dream!
