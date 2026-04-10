@@ -90,24 +90,27 @@ export default function VirtualAssistant() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-black text-center mb-8">
+          <h2 className="text-4xl font-bold font-inter text-black text-center mb-6">
             Choose your Plan
           </h2>
-          <p className="text-center text-jade text-lg mb-12 font-light">
+          <p className="text-center text-jade text-lg font-normal font-inter mb-16">
             Appointment Setting, Calendar Management, Client Mailouts & Gifts, Copy-writing, Data Entry, Document Creation, Email Management, File Management, Invoices, Letter Writing, Program Design, Social Media Graphics, Social Media Post, Travel Arrangements, Website Maintenance, and Zoom Support
           </p>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-8">
             {plans.map((plan) => (
-              <div key={plan.name} className={`${plan.color} rounded-lg shadow-lg overflow-hidden flex flex-col p-6`}>
-                <h3 className="text-2xl font-bold text-black mb-4">{plan.name}</h3>
-                <p className="text-xl font-bold text-black mb-2">{plan.price}</p>
-                <p className="text-lg font-semibold text-black mb-6">{plan.hours}</p>
-                <button className="mt-auto bg-black text-white py-3 px-4 rounded font-semibold hover:opacity-90 transition-opacity">
-                  Contact
-                </button>
+              <div key={plan.name} className="bg-purple-100 rounded-lg shadow-lg overflow-hidden flex flex-col p-6">
+                <h3 className="text-2xl font-bold font-inter text-black mb-4">{plan.name}</h3>
+                <p className="text-2xl font-bold font-inter text-black mb-2">{plan.price}</p>
+                <p className="text-lg font-normal font-inter text-black mb-6">{plan.hours}</p>
+                <Link
+                  to="/virtual-assistant-form"
+                  className="mt-auto bg-jade text-white py-3 px-4 rounded-lg font-bold font-inter text-center hover:bg-jade/90 transition-colors"
+                >
+                  Get Connected
+                </Link>
               </div>
             ))}
           </div>
@@ -115,9 +118,9 @@ export default function VirtualAssistant() {
       </section>
 
       {/* Comparison Table Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-jade text-center mb-12">
+          <h2 className="text-4xl font-bold font-inter text-jade text-center mb-12">
             iJADE vs Other Virtual Assistant Services
           </h2>
 
@@ -125,13 +128,13 @@ export default function VirtualAssistant() {
             <table className="w-full border-collapse">
               <thead>
                 <tr>
-                  <th className="border-b-2 border-black p-4 text-left font-semibold text-black text-xl">
+                  <th className="border-b-2 border-black p-4 text-left font-bold font-inter text-black text-xl">
                     Company
                   </th>
-                  <th className="border-b-2 border-black p-4 text-left font-semibold text-black text-xl">
+                  <th className="border-b-2 border-black p-4 text-left font-bold font-inter text-black text-xl">
                     iJADE
                   </th>
-                  <th className="border-b-2 border-black p-4 text-left font-semibold text-black text-xl">
+                  <th className="border-b-2 border-black p-4 text-left font-bold font-inter text-black text-xl">
                     Other Services
                   </th>
                 </tr>
@@ -139,13 +142,13 @@ export default function VirtualAssistant() {
               <tbody>
                 {comparison.map((row, idx) => (
                   <tr key={idx} className={idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                    <td className="border-b border-black p-4 font-semibold text-black text-lg">
+                    <td className="border-b border-black p-4 font-bold font-inter text-black text-lg">
                       {row.category}
                     </td>
-                    <td className="border-b border-black p-4 text-black text-base">
+                    <td className="border-b border-black p-4 font-normal font-inter text-black text-base">
                       {row.ijadeName}
                     </td>
-                    <td className="border-b border-black p-4 text-black text-base">
+                    <td className="border-b border-black p-4 font-normal font-inter text-black text-base">
                       {row.otherName}
                     </td>
                   </tr>
@@ -157,11 +160,20 @@ export default function VirtualAssistant() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-semibold text-black">
-            Create Your Vision; Achieve Your Dream!
+          <h2 className="text-3xl md:text-4xl font-bold font-inter text-black mb-6">
+            Ready to Get Connected?
           </h2>
+          <p className="text-lg font-normal font-inter text-black mb-8">
+            Let's work together to support your growth and success.
+          </p>
+          <Link
+            to="/virtual-assistant-form"
+            className="inline-block px-8 py-3 bg-jade text-white font-bold font-inter rounded-lg hover:bg-jade/90 transition-colors"
+          >
+            Get Connected
+          </Link>
         </div>
       </section>
     </Layout>

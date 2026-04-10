@@ -34,24 +34,27 @@ export default function VirtualAssistantForm() {
     <Layout>
       {/* Page banner */}
       <div className="bg-jade py-5 text-center">
-        <h1 className="text-white text-2xl font-bold font-inter">
+        <h1 className="text-white text-4xl font-bold font-inter">
           Virtual Assistant
         </h1>
       </div>
 
       {/* Form section */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+          <h2 className="text-3xl font-bold font-inter text-black text-center mb-12">
+            Get Connected With Us
+          </h2>
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             {/* First / Last name row */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-normal font-poppins text-[#4E4958]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-normal font-inter text-[#4E4958]">
                   First Name
                 </label>
                 <input
                   {...register("firstName", { required: "First name is required" })}
-                  className="w-full h-[53px] rounded-lg border border-[#E6E6F0] bg-[#FAFAFC] px-4 text-sm font-poppins text-[#32264D] focus:outline-none focus:ring-2 focus:ring-jade/40"
+                  className="w-full h-[53px] rounded-lg border border-[#E6E6F0] bg-[#FAFAFC] px-4 text-sm font-inter text-[#32264D] placeholder-[#C1BCCC] focus:outline-none focus:ring-2 focus:ring-jade/40"
                   placeholder="Enter your first name"
                 />
                 {errors.firstName && (
@@ -59,13 +62,13 @@ export default function VirtualAssistantForm() {
                 )}
               </div>
 
-              <div className="flex flex-col gap-1.5">
-                <label className="text-sm font-normal font-poppins text-[#4E4958]">
+              <div className="flex flex-col gap-2">
+                <label className="text-sm font-normal font-inter text-[#4E4958]">
                   Last Name
                 </label>
                 <input
                   {...register("lastName", { required: "Last name is required" })}
-                  className="w-full h-[53px] rounded-lg border border-[#E6E6F0] bg-[#FAFAFC] px-4 text-sm font-poppins text-[#32264D] focus:outline-none focus:ring-2 focus:ring-jade/40"
+                  className="w-full h-[53px] rounded-lg border border-[#E6E6F0] bg-[#FAFAFC] px-4 text-sm font-inter text-[#32264D] placeholder-[#C1BCCC] focus:outline-none focus:ring-2 focus:ring-jade/40"
                   placeholder="Enter your last name"
                 />
                 {errors.lastName && (
@@ -75,8 +78,8 @@ export default function VirtualAssistantForm() {
             </div>
 
             {/* Email */}
-            <div className="flex flex-col gap-1.5">
-              <label className="text-sm font-normal font-poppins text-[#4E4958]">
+            <div className="flex flex-col gap-2">
+              <label className="text-sm font-normal font-inter text-[#4E4958]">
                 Email Address
               </label>
               <input
@@ -85,7 +88,7 @@ export default function VirtualAssistantForm() {
                   required: "Email is required",
                   pattern: { value: /^\S+@\S+$/i, message: "Enter a valid email" },
                 })}
-                className="w-full h-[53px] rounded-lg border border-[#EDEDF4] bg-[#FAFAFC] px-4 text-sm font-poppins text-[#32264D] focus:outline-none focus:ring-2 focus:ring-jade/40"
+                className="w-full h-[53px] rounded-lg border border-[#E6E6F0] bg-[#FAFAFC] px-4 text-sm font-inter text-[#32264D] placeholder-[#C1BCCC] focus:outline-none focus:ring-2 focus:ring-jade/40"
                 placeholder="Enter your email address"
               />
               {errors.email && (
@@ -94,14 +97,14 @@ export default function VirtualAssistantForm() {
             </div>
 
             {/* Phone */}
-            <div className="flex flex-col gap-1.5">
-              <label className="text-sm font-normal font-poppins text-[#4E4958]">
+            <div className="flex flex-col gap-2">
+              <label className="text-sm font-normal font-inter text-[#4E4958]">
                 Phone Number
               </label>
               <input
                 type="tel"
                 {...register("phone", { required: "Phone number is required" })}
-                className="w-full h-[53px] rounded-lg border border-[#EDEDF4] bg-[#FAFAFC] px-4 text-sm font-poppins text-[#32264D] focus:outline-none focus:ring-2 focus:ring-jade/40"
+                className="w-full h-[53px] rounded-lg border border-[#E6E6F0] bg-[#FAFAFC] px-4 text-sm font-inter text-[#32264D] placeholder-[#C1BCCC] focus:outline-none focus:ring-2 focus:ring-jade/40"
                 placeholder="Enter your phone number"
               />
               {errors.phone && (
@@ -110,13 +113,13 @@ export default function VirtualAssistantForm() {
             </div>
 
             {/* Plan */}
-            <div className="flex flex-col gap-1.5">
-              <label className="text-sm font-normal font-poppins text-[#4E4958]">
+            <div className="flex flex-col gap-2">
+              <label className="text-sm font-normal font-inter text-[#4E4958]">
                 Plan
               </label>
               <select
                 {...register("plan", { required: "Please select a plan" })}
-                className="w-full h-[52px] rounded-lg border border-[#EDEDF4] bg-[#FAFAFC] px-4 text-sm font-poppins text-[#32264D] focus:outline-none focus:ring-2 focus:ring-jade/40"
+                className="w-full h-[52px] rounded-lg border border-[#E6E6F0] bg-[#FAFAFC] px-4 text-sm font-inter text-[#32264D] focus:outline-none focus:ring-2 focus:ring-jade/40"
               >
                 <option value="">Select a plan</option>
                 {plans.map((p) => (
@@ -131,23 +134,23 @@ export default function VirtualAssistantForm() {
             </div>
 
             {/* Message */}
-            <div className="flex flex-col gap-1.5">
-              <label className="text-sm font-normal font-poppins text-[#4E4958]">
+            <div className="flex flex-col gap-2">
+              <label className="text-sm font-normal font-inter text-[#4E4958]">
                 Message
               </label>
               <textarea
                 {...register("message")}
                 rows={6}
-                className="w-full rounded-lg border border-[#EDEDF4] bg-[#FAFAFC] px-4 py-3 text-sm font-poppins text-[#32264D] resize-none focus:outline-none focus:ring-2 focus:ring-jade/40"
+                className="w-full rounded-lg border border-[#E6E6F0] bg-[#FAFAFC] px-4 py-3 text-sm font-inter text-[#32264D] placeholder-[#C1BCCC] resize-none focus:outline-none focus:ring-2 focus:ring-jade/40"
                 placeholder="Tell us more about what you need..."
               />
             </div>
 
             {/* Submit */}
-            <div className="flex justify-center pt-2">
+            <div className="flex justify-center pt-4">
               <button
                 type="submit"
-                className="bg-jade text-white font-inter font-semibold text-base px-12 py-3 rounded-lg hover:bg-jade/90 transition-colors"
+                className="bg-jade text-white font-bold font-inter text-base px-12 py-3 rounded-lg hover:bg-jade/90 transition-colors"
               >
                 Submit
               </button>
