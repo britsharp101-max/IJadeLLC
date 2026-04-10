@@ -32,13 +32,6 @@ export default function VirtualAssistantForm() {
 
   return (
     <Layout>
-      {/* Page banner */}
-      <div className="bg-jade py-5 text-center">
-        <h1 className="text-white text-4xl font-bold font-inter">
-          Virtual Assistant
-        </h1>
-      </div>
-
       {/* Form section */}
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
