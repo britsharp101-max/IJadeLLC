@@ -9,7 +9,7 @@ const books = [
       "My book, Threaded Chords of Life: An Inspirational Memoir (#TCOL), is a seven-chapter journey that weaves personal life experiences with practical application segments and affirmation breaks. Each chapter is designed to encourage readers to activate—or reactivate—their dreams and walk forward with intention.",
     image:
       "https://api.builder.io/api/v1/image/assets/TEMP/9b2840e4bafa4f148cff76914e48bf3ce6310f21?width=358",
-    cta: { label: "Buy Now", href: "/books/cart", style: "buy" },
+    cta: { label: "Pre Order", href: "/books/cart", style: "buy" },
   },
   {
     id: "broken-promise",
@@ -18,7 +18,7 @@ const books = [
       "Please be on the lookout for the relaunch of Threaded Chords of Life and The Broken Promise: Reflections on Healthy Relationships in Summer 2026. Pre-orders for the relaunched edition will be available soon.",
     image:
       "https://api.builder.io/api/v1/image/assets/TEMP/e00b71a6c19db1939c1ec4df8216dbb322f7b5e2?width=356",
-    cta: { label: "Pre Order Book", href: "#", style: "preorder" },
+    cta: { label: "Coming Soon", href: "#", style: "preorder" },
   },
 ];
 
