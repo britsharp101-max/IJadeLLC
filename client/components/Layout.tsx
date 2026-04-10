@@ -29,7 +29,7 @@ function ServicesDropdown({ isActive }: { isActive: boolean }) {
           isActive ? 'text-black font-semibold' : 'text-black font-normal hover:text-jade'
         }`}
       >
-        Service
+        Services
         <svg
           className={`w-3 h-3 transition-transform ${open ? 'rotate-180' : ''}`}
           fill="none"
