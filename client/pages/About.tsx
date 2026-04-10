@@ -31,7 +31,7 @@ export default function About() {
       <section className="bg-jade text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold font-inter mb-12">
-            Values — Education Enlightenment Empowerment
+            Values
           </h2>
           <div className="flex justify-center">
             <img
