@@ -24,7 +24,7 @@ export default function Index() {
                 iJADE, LLC is a multi-dimensional company dedicated to encouraging growth, clarity, and purpose. Through Educational Services, Vision Experience sessions, and Virtual Assistant Support.
               </p>
               <Link
-                to="/service"
+                to="/about"
                 className="inline-block px-6 py-2 border border-white text-white font-semibold text-sm rounded hover:bg-white hover:text-jade transition-colors"
               >
                 Learn More
