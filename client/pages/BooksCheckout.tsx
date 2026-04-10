@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import Layout from "@/components/Layout";
@@ -65,20 +65,23 @@ function SectionHeader({ label }: { label: string }) {
   );
 }
 
-function InputField({
-  label,
-  ...props
-}: React.InputHTMLAttributes<HTMLInputElement> & { label: string }) {
+const InputField = forwardRef<
+  HTMLInputElement,
+  React.InputHTMLAttributes<HTMLInputElement> & { label: string }
+>(({ label, ...props }, ref) => {
   return (
     <div className="flex flex-col gap-1">
       <label className="text-sm font-light font-inter text-black">{label}</label>
       <input
+        ref={ref}
         {...props}
         className="w-full h-[50px] border border-[#E6E6F0] bg-white px-3 text-base font-light font-inter text-black focus:outline-none focus:ring-2 focus:ring-jade/30"
       />
     </div>
   );
-}
+});
+
+InputField.displayName = "InputField";
 
 function OrderSidebar({ shipping }: { shipping: number }) {
   const total = SUBTOTAL + shipping;
