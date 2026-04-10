@@ -16,6 +16,7 @@ import BooksCart from "./pages/BooksCart";
 import BooksCheckout from "./pages/BooksCheckout";
 import BooksConfirmation from "./pages/BooksConfirmation";
 import Contact from "./pages/Contact";
+import ContactConfirmation from "./pages/ContactConfirmation";
 import VirtualAssistant from "./pages/VirtualAssistant";
 import VirtualAssistantForm from "./pages/VirtualAssistantForm";
 import VirtualAssistantConfirmation from "./pages/VirtualAssistantConfirmation";
@@ -48,6 +49,7 @@ export default function App() {
             <Route path="/books/checkout" element={<BooksCheckout />} />
             <Route path="/books/confirmation" element={<BooksConfirmation />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/contact-confirmation" element={<ContactConfirmation />} />
             <Route path="/service" element={<EducationalConsulting />} />
             <Route path="/educational-consulting-form" element={<EducationalConsultingForm />} />
             <Route path="/educational-consulting-confirmation" element={<EducationalConsultingConfirmation />} />

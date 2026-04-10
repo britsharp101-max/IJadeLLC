@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 interface ContactFormData {
   name: string;
@@ -9,10 +10,12 @@ interface ContactFormData {
 }
 
 export default function Contact() {
+  const navigate = useNavigate();
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ContactFormData>();
 
   const onSubmit = (data: ContactFormData) => {
     console.log('Contact form submitted:', data);
+    navigate('/contact-confirmation');
     reset();
   };
 
