@@ -121,20 +121,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               Contact
             </Link>
 
-            <div className="border-l border-gray-300 pl-8 flex items-center gap-4">
-              <Link
-                to="/login"
-                className="text-base font-normal text-black hover:text-jade transition-colors"
-              >
-                Sign In
-              </Link>
-              <Link
-                to="/signup"
-                className="px-4 py-2 bg-jade text-white rounded-lg font-semibold text-sm hover:bg-jade/90 transition-colors"
-              >
-                Get Started
-              </Link>
-            </div>
           </div>
 
           {/* Mobile Menu Icon */}
@@ -169,10 +155,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <Link to="/books" onClick={() => setMobileOpen(false)} className="text-base font-inter text-black font-medium">Books</Link>
             <Link to="/about" onClick={() => setMobileOpen(false)} className="text-base font-inter text-black font-medium">About</Link>
             <Link to="/contact" onClick={() => setMobileOpen(false)} className="text-base font-inter text-black font-medium">Contact</Link>
-            <div className="border-t border-gray-200 pt-4 flex flex-col gap-2">
-              <Link to="/login" onClick={() => setMobileOpen(false)} className="text-base font-inter text-black font-medium">Sign In</Link>
-              <Link to="/signup" onClick={() => setMobileOpen(false)} className="text-center bg-jade text-white py-2 rounded-lg font-semibold">Get Started</Link>
-            </div>
           </div>
         )}
       </nav>
