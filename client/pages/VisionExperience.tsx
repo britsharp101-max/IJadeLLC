@@ -110,7 +110,7 @@ export default function VisionExperience() {
               <img
                 src="https://cdn.builder.io/api/v1/image/assets%2Fe3a3852c609b48f4bbc0e1bbcd09c40d%2Fae532faadc874f798a8afe7ab7a6222b?format=webp&width=800&height=1200"
                 alt="Guided reflection and affirmation"
-                className="w-20 h-20 mb-4 object-cover"
+                className="w-20 h-20 mb-4 object-contain"
               />
               <h3 className="text-2xl font-semibold mb-2">Guided reflection and affirmation</h3>
             </div>
