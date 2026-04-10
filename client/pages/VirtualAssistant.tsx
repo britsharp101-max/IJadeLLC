@@ -72,39 +72,6 @@ export default function VirtualAssistant() {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="bg-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-black mb-6 font-inter">
-                Virtual Assistant Services
-              </h1>
-              <h2 className="text-3xl md:text-4xl font-bold font-inter text-black mb-6 leading-tight">
-                Create Your Vision<br />
-                Achieve Your Dream!
-              </h2>
-              <p className="text-xl text-black mb-8 font-light leading-relaxed">
-                iJADE, LLC provides reliable virtual assistant services to simplify operations and support business growth. From administrative support to creative and operational tasks, flexible service packages help take daily work off your plate so you can focus on what matters most efficiently with peace of mind.
-              </p>
-              <Link
-                to="/virtual-assistant-form"
-                className="inline-block px-8 py-3 border-2 border-black text-black font-semibold rounded hover:bg-black hover:text-white transition-colors"
-              >
-                Get Connected
-              </Link>
-            </div>
-            <div className="flex justify-center">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/bee053fffd23f8c4d17c4b2d3e45b1774a2d55c6?width=880"
-                alt="Virtual Assistant Services"
-                className="w-full max-w-lg h-auto rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
