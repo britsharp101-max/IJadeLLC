@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function VisionExperiencePricing() {
   const packages = [
@@ -14,11 +15,53 @@ export default function VisionExperiencePricing() {
       description: 'includes a polaroid photo, a premium pen, and one electronic follow-up.',
     },
     {
-      name: 'Diamond',
+      name: 'Gold',
+      price: '$105',
+      description: 'includes a polaroid photo, a premium pen, and one phone-to-phone follow-up.',
+    },
+    {
+      name: 'Platinum',
+      price: '$110',
+      description: 'includes a polaroid photo, a premium pen, and one electronic follow-up.',
+    },
+    {
+      name: 'Ruby',
+      price: '$95',
+      description: 'includes a Vision Book, a premium pen, and six phone-to-phone follow-ups.',
+    },
+    {
+      name: 'Pearl',
+      price: '$80',
+      description: 'includes a Vision Book, a premium pen, and four phone-to-phone follow-ups.',
+    },
+    {
+      name: 'Emerald',
+      price: '$90',
+      description: 'includes a Vision Book, a premium pen, and five phone-to-phone follow-ups.',
+    },
+    {
+      name: 'JADE',
       price: '$120',
-      description: 'includes a polaroid photo, a premium pen, and three electronic follow-ups.',
+      description: 'includes a Vision Book, a premium pen, seven phone-to-phone follow-ups, and an autographed copy of Threaded Chords of Life: An Inspirational Memoir.',
     },
   ];
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const itemsPerSlide = 3;
+  const totalSlides = Math.ceil(packages.length / itemsPerSlide);
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+  };
+
+  const visiblePackages = packages.slice(
+    currentSlide * itemsPerSlide,
+    (currentSlide + 1) * itemsPerSlide
+  );
 
   return (
     <Layout>
@@ -32,12 +75,36 @@ export default function VisionExperiencePricing() {
             i.J.A.D.E. "One-to-One" Vision Experience Session Packages
           </p>
 
-          {/* Package Carousel - All 3 packages shown */}
+          {/* Package Carousel */}
           <div className="relative mb-16">
+            {/* Left Arrow */}
+            <button
+              onClick={handlePrev}
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-12 z-10 p-2 hover:opacity-70 transition-opacity"
+              aria-label="Previous packages"
+            >
+              <svg
+                width="11"
+                height="19"
+                viewBox="0 0 11 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6"
+              >
+                <path
+                  d="M10.6635 0L0 9.66897L10.6635 18.3946"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+
+            {/* Carousel Container */}
             <div className="flex gap-6 justify-center">
-              {packages.map((pkg, index) => (
+              {visiblePackages.map((pkg, index) => (
                 <div
-                  key={`${pkg.name}-${index}`}
+                  key={`${pkg.name}-${currentSlide}-${index}`}
                   className="flex-shrink-0 w-56 bg-gray-100 rounded-lg shadow-md overflow-hidden"
                 >
                   {/* Header */}
@@ -63,6 +130,43 @@ export default function VisionExperiencePricing() {
                 </div>
               ))}
             </div>
+
+            {/* Right Arrow */}
+            <button
+              onClick={handleNext}
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-12 z-10 p-2 hover:opacity-70 transition-opacity"
+              aria-label="Next packages"
+            >
+              <svg
+                width="11"
+                height="19"
+                viewBox="0 0 11 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-6 h-6"
+              >
+                <path
+                  d="M0 18.3946L10.6635 8.72566L0 0"
+                  stroke="black"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+          </div>
+
+          {/* Pagination Dots */}
+          <div className="flex gap-2 justify-center mb-12">
+            {Array.from({ length: totalSlides }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-colors ${
+                  index === currentSlide ? 'bg-black' : 'bg-gray-300'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>
