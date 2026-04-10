@@ -37,7 +37,7 @@ export default function About() {
             <img
               src="https://cdn.builder.io/api/v1/image/assets%2Fe3a3852c609b48f4bbc0e1bbcd09c40d%2Fe36bcfb622bb4ea7830990a363ca7ee8?format=webp&width=800&height=1200"
               alt="Values"
-              className="w-full max-w-sm h-auto"
+              className="w-full max-w-2xl h-auto"
             />
           </div>
         </div>
