@@ -151,12 +151,6 @@ export default function Auth() {
             </button>
           </AuthFormContainer>
 
-          {/* Footer note */}
-          <p className="text-xs text-gray-500 text-center mt-6">
-            {mode === "signup"
-              ? "By signing up, you agree to receive marketing emails from iJADE"
-              : "This is a demo. Use any credentials to test."}
-          </p>
         </div>
       </div>
     </Layout>
