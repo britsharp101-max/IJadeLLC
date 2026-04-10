@@ -27,24 +27,29 @@ export default function VisionExperiencePricing() {
       description: 'includes a polaroid photo, a premium pen, and one electronic follow-up.',
     },
     {
-      name: 'Emerald',
-      price: '$90',
-      description: 'includes a Vision Book, a premium pen, and five phone-to-phone follow-ups.',
+      name: 'Diamond',
+      price: '$120',
+      description: 'includes a polaroid photo, a premium pen, and two electronic follow-ups.',
     },
     {
       name: 'Pearl',
-      price: '$80',
-      description: 'includes a Vision Book, a premium pen, and four phone-to-phone follow-ups.',
+      price: '$135',
+      description: 'includes a polaroid photo, a premium pen, and three electronic follow-ups.',
+    },
+    {
+      name: 'Emerald',
+      price: '$150',
+      description: 'includes a polaroid photo, a premium pen, and four electronic follow-ups.',
     },
     {
       name: 'Ruby',
-      price: '$95',
-      description: 'includes a Vision Book, a premium pen, and six phone-to-phone follow-ups.',
+      price: '$165',
+      description: 'includes a polaroid photo, a premium pen, and five electronic follow-ups.',
     },
     {
       name: 'JADE',
-      price: '$120',
-      description: 'includes a Vision Book, a premium pen, seven phone-to-phone follow-ups, and an autographed copy of Threaded Chords of Life: An Inspirational Memoir.',
+      price: '$185',
+      description: 'includes a polaroid photo, a premium pen, five electronic follow-ups, one virtual follow-up, and an autographed copy of "Threaded Chords of Life".',
     },
   ];
 
@@ -146,6 +151,15 @@ export default function VisionExperiencePricing() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Optional Add-On Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-lg text-jade font-semibold">
+            Optional – Add a 15-minute Virtual Follow-Up to your package for <span className="text-2xl font-bold">$44</span>
+          </p>
         </div>
       </section>
 
