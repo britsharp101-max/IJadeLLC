@@ -10,7 +10,11 @@ import About from "./pages/About";
 import VisionExperience from "./pages/VisionExperience";
 import VisionExperiencePricing from "./pages/VisionExperiencePricing";
 import VisionExperienceForm from "./pages/VisionExperienceForm";
+import VisionExperienceConfirmation from "./pages/VisionExperienceConfirmation";
 import Books from "./pages/Books";
+import BooksCart from "./pages/BooksCart";
+import BooksCheckout from "./pages/BooksCheckout";
+import BooksConfirmation from "./pages/BooksConfirmation";
 import Contact from "./pages/Contact";
 import VirtualAssistant from "./pages/VirtualAssistant";
 import VirtualAssistantForm from "./pages/VirtualAssistantForm";
@@ -33,7 +37,11 @@ export default function App() {
             <Route path="/vision-experience" element={<VisionExperience />} />
             <Route path="/vision-experience-pricing" element={<VisionExperiencePricing />} />
             <Route path="/vision-experience-form" element={<VisionExperienceForm />} />
+            <Route path="/vision-experience-confirmation" element={<VisionExperienceConfirmation />} />
             <Route path="/books" element={<Books />} />
+            <Route path="/books/cart" element={<BooksCart />} />
+            <Route path="/books/checkout" element={<BooksCheckout />} />
+            <Route path="/books/confirmation" element={<BooksConfirmation />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/service" element={<EducationalConsulting />} />
             <Route path="/educational-consulting-form" element={<EducationalConsultingForm />} />

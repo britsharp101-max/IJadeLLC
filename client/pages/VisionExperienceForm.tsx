@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 type FormType = 'individual' | 'organization';
 
@@ -25,6 +26,7 @@ interface OrganizationFormData {
 type FormData = IndividualFormData | OrganizationFormData;
 
 export default function VisionExperienceForm() {
+  const navigate = useNavigate();
   const [formType, setFormType] = useState<FormType>('individual');
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
 
@@ -43,6 +45,7 @@ export default function VisionExperienceForm() {
 
   const onSubmit = (data: FormData) => {
     console.log('Form submitted:', { type: formType, ...data });
+    navigate('/vision-experience-confirmation');
     // Here you would typically send the data to a backend
     reset();
     // Show success message or redirect

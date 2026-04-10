@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 
 export default function Books() {
@@ -53,9 +54,18 @@ export default function Books() {
                   <p className="text-black mb-6 flex-1 font-light text-lg">
                     {book.description}
                   </p>
-                  <button className="bg-gray-300 text-black py-2 px-6 rounded font-semibold hover:bg-gray-400 transition-colors text-sm">
-                    Pre Order Book
-                  </button>
+                  {book.title === 'Threaded Chords of Life: An Inspirational Memoir' ? (
+                    <Link
+                      to="/books/cart"
+                      className="inline-block bg-jade text-white py-2 px-6 rounded font-semibold hover:bg-jade/90 transition-colors text-sm text-center"
+                    >
+                      Buy Now
+                    </Link>
+                  ) : (
+                    <button className="bg-gray-300 text-black py-2 px-6 rounded font-semibold hover:bg-gray-400 transition-colors text-sm cursor-not-allowed" disabled>
+                      Coming Soon
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
