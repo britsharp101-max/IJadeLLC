@@ -51,6 +51,21 @@ export default function VisionExperiencePricing() {
       price: '$185',
       description: 'includes a polaroid photo, a premium pen, five electronic follow-ups, one virtual follow-up, and an autographed copy of "Threaded Chords of Life".',
     },
+    {
+      name: 'Sapphire',
+      price: '$210',
+      description: 'includes a polaroid photo, a premium pen, six electronic follow-ups, two virtual follow-ups, and an autographed copy of "Threaded Chords of Life".',
+    },
+    {
+      name: 'Opal',
+      price: '$240',
+      description: 'includes a polaroid photo, a premium pen, seven electronic follow-ups, three virtual follow-ups, and an autographed copy of "Threaded Chords of Life".',
+    },
+    {
+      name: 'Crown',
+      price: '$275',
+      description: 'includes a polaroid photo, a premium pen, eight electronic follow-ups, four virtual follow-ups, an autographed copy of "Threaded Chords of Life", and a personalized vision board consultation.',
+    },
   ];
 
   const handlePrev = () => {
