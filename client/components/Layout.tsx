@@ -167,7 +167,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Footer */}
       <footer className="bg-jade text-white py-8 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm">© 2024 iJADE, LLC. All rights reserved.</p>
+          <p className="text-sm">© 2026 iJADE, LLC. All rights reserved.</p>
         </div>
       </footer>
     </div>
