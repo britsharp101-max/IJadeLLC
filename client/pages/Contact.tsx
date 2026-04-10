@@ -75,12 +75,19 @@ export default function Contact() {
           </form>
 
           <div className="mt-16 text-center">
-            <h2 className="text-2xl font-bold text-black mb-8">LinkTree</h2>
+            <a
+              href="https://linktr.ee/jjtothethirdpower?utm_source=ig&utm_medium=social&utm_content=link_in_bio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mb-8"
+            >
+              <h2 className="text-2xl font-bold text-black hover:text-jade transition-colors">LinkTree</h2>
+            </a>
             <div className="flex items-center justify-center gap-6">
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+              <a href="https://youtube.com/@jjtothe3rdpower?si=pQaLe_TYFFDfAhON" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                 <img src="https://api.builder.io/api/v1/image/assets/TEMP/10c73f506629bf41ca0b1bd1ae11a3a48bb004a2?width=64" alt="YouTube" className="w-8 h-8" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+              <a href="https://www.instagram.com/jjtothe3rdpower?igsh=MWYyc2NlYXBrdjlraA==" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
                 <img src="https://api.builder.io/api/v1/image/assets/TEMP/0d764aaae8323773a459da62ee835f9b2b598915?width=64" alt="Instagram" className="w-8 h-8" />
               </a>
             </div>
