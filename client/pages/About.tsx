@@ -29,10 +29,21 @@ export default function About() {
 
       {/* Values Section */}
       <section className="bg-jade text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold font-inter">
-            Values — Education Enlightenment Empowerment
-          </h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            <div className="flex justify-center">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fe3a3852c609b48f4bbc0e1bbcd09c40d%2Fe36bcfb622bb4ea7830990a363ca7ee8?format=webp&width=800&height=1200"
+                alt="Values"
+                className="w-full max-w-sm h-auto"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <h2 className="text-4xl font-bold font-inter">
+                Values — Education Enlightenment Empowerment
+              </h2>
+            </div>
+          </div>
         </div>
       </section>
 
