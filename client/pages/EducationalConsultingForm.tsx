@@ -158,26 +158,54 @@ export default function EducationalConsultingForm() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-4">
                 Select Workshops
               </label>
-              <div className="space-y-3">
-                {workshops.map((workshop) => (
-                  <div key={workshop.id} className="flex items-start">
-                    <input
-                      type="checkbox"
-                      id={workshop.id}
-                      value={workshop.id}
-                      {...register('workshops')}
-                      className="w-4 h-4 mt-1 rounded border-gray-300 text-jade focus:ring-2 focus:ring-jade cursor-pointer"
-                    />
-                    <label htmlFor={workshop.id} className="ml-3 cursor-pointer">
-                      <p className="font-medium text-gray-700">{workshop.name}</p>
-                      <p className="text-sm text-gray-500">{workshop.date}</p>
-                    </label>
-                  </div>
-                ))}
+
+              {/* July 11, 2026 */}
+              <div className="mb-8">
+                <h3 className="text-lg font-semibold text-jade mb-4">Saturday, July 11, 2026</h3>
+                <div className="space-y-3 bg-gray-50 p-4 rounded-lg">
+                  {workshops.filter(w => w.date.includes('July 11')).map((workshop) => (
+                    <div key={workshop.id} className="flex items-start bg-white p-3 rounded border border-gray-200">
+                      <input
+                        type="checkbox"
+                        id={workshop.id}
+                        value={workshop.id}
+                        {...register('workshops')}
+                        className="w-4 h-4 mt-1 rounded border-gray-300 text-jade focus:ring-2 focus:ring-jade cursor-pointer"
+                      />
+                      <label htmlFor={workshop.id} className="ml-3 cursor-pointer flex-1">
+                        <p className="font-medium text-gray-800">{workshop.name}</p>
+                        <p className="text-sm text-gray-600">{workshop.date.split('•')[1]?.trim()}</p>
+                      </label>
+                    </div>
+                  ))}
+                </div>
               </div>
+
+              {/* July 18, 2026 */}
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-jade mb-4">Saturday, July 18, 2026</h3>
+                <div className="space-y-3 bg-gray-50 p-4 rounded-lg">
+                  {workshops.filter(w => w.date.includes('July 18')).map((workshop) => (
+                    <div key={workshop.id} className="flex items-start bg-white p-3 rounded border border-gray-200">
+                      <input
+                        type="checkbox"
+                        id={workshop.id}
+                        value={workshop.id}
+                        {...register('workshops')}
+                        className="w-4 h-4 mt-1 rounded border-gray-300 text-jade focus:ring-2 focus:ring-jade cursor-pointer"
+                      />
+                      <label htmlFor={workshop.id} className="ml-3 cursor-pointer flex-1">
+                        <p className="font-medium text-gray-800">{workshop.name}</p>
+                        <p className="text-sm text-gray-600">{workshop.date.split('•')[1]?.trim()}</p>
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               {errors.workshops && (
                 <p className="text-red-500 text-sm mt-1">Please select at least one workshop</p>
               )}
