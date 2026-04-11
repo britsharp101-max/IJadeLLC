@@ -4,11 +4,7 @@ import { Link } from 'react-router-dom';
 export default function EducationalConsulting() {
   const workshops = [
     {
-      title: 'Leading with Vision',
-      description: 'Learn how to plan, manage, and sustain impactful student programs. Participants engage in strategic planning and leadership practices that align programs with student needs and organizational goals.',
-    },
-    {
-      title: 'From Chaos to Clarity',
+      title: 'Calm, Consistent, Connected Classrooms',
       description: 'Build proactive classroom systems rooted in consistency, clarity, and connection. Educators explore real classroom scenarios and research-based strategies that reduce disruptions, increase student ownership, and foster positive learning environments.',
     },
     {
@@ -16,7 +12,11 @@ export default function EducationalConsulting() {
       description: 'Discover how strong relationships drive student engagement and academic success. This workshop equips educators with practical strategies to create inclusive, trust-centered classrooms where students feel seen, valued, and supported.',
     },
     {
-      title: 'Beyond the Text',
+      title: 'Leading with Vision',
+      description: 'Learn how to plan, manage, and sustain impactful student programs. Participants engage in strategic planning and leadership practices that align programs with student needs and organizational goals.',
+    },
+    {
+      title: 'Bringing ELA to Life',
       description: 'Re-imagine ELA instruction through active learning and collaboration. Educators experience strategies as learners first, then adapt them to boost engagement and deepen comprehension across diverse classrooms.',
     },
   ];
