@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
 interface EducationalConsultingFormData {
@@ -7,19 +7,45 @@ interface EducationalConsultingFormData {
   lastName: string;
   email: string;
   phone: string;
-  workshop: string;
+  workshops: string[];
   message: string;
+}
+
+interface WorkshopOption {
+  id: string;
+  name: string;
+  date: string;
 }
 
 export default function EducationalConsultingForm() {
   const navigate = useNavigate();
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<EducationalConsultingFormData>();
+  const { register, handleSubmit, reset, control, formState: { errors } } = useForm<EducationalConsultingFormData>({
+    defaultValues: {
+      workshops: [],
+    },
+  });
 
-  const workshops = [
-    'Leading with Vision',
-    'From Chaos to Clarity',
-    'Connection Before Content',
-    'Beyond the Text',
+  const workshops: WorkshopOption[] = [
+    {
+      id: 'calm-consistent-connected',
+      name: 'Calm, Consistent, Connected Classrooms',
+      date: 'Saturday, July 11, 2026',
+    },
+    {
+      id: 'connection-before-content',
+      name: 'Connection Before Content',
+      date: 'Saturday, July 18, 2026',
+    },
+    {
+      id: 'leading-with-vision',
+      name: 'Leading with Vision',
+      date: 'Saturday, July 11, 2026',
+    },
+    {
+      id: 'bringing-ela-to-life',
+      name: 'Bringing ELA to Life',
+      date: 'Saturday, July 18, 2026',
+    },
   ];
 
   const onSubmit = (data: EducationalConsultingFormData) => {
@@ -113,21 +139,27 @@ export default function EducationalConsultingForm() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Workshop
+                Select Workshops
               </label>
-              <select
-                {...register('workshop', { required: 'Please select a workshop' })}
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-jade focus:border-transparent outline-none transition"
-              >
-                <option value="">Select a workshop...</option>
+              <div className="space-y-3">
                 {workshops.map((workshop) => (
-                  <option key={workshop} value={workshop}>
-                    {workshop}
-                  </option>
+                  <div key={workshop.id} className="flex items-start">
+                    <input
+                      type="checkbox"
+                      id={workshop.id}
+                      value={workshop.id}
+                      {...register('workshops')}
+                      className="w-4 h-4 mt-1 rounded border-gray-300 text-jade focus:ring-2 focus:ring-jade cursor-pointer"
+                    />
+                    <label htmlFor={workshop.id} className="ml-3 cursor-pointer">
+                      <p className="font-medium text-gray-700">{workshop.name}</p>
+                      <p className="text-sm text-gray-500">{workshop.date}</p>
+                    </label>
+                  </div>
                 ))}
-              </select>
-              {errors.workshop && (
-                <p className="text-red-500 text-sm mt-1">{errors.workshop.message}</p>
+              </div>
+              {errors.workshops && (
+                <p className="text-red-500 text-sm mt-1">Please select at least one workshop</p>
               )}
             </div>
 
