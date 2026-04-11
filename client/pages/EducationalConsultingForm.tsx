@@ -27,24 +27,44 @@ export default function EducationalConsultingForm() {
 
   const workshops: WorkshopOption[] = [
     {
-      id: 'calm-consistent-connected',
+      id: 'calm-consistent-connected-july11',
       name: 'Calm, Consistent, Connected Classrooms',
-      date: 'Saturday, July 11, 2026',
+      date: 'Saturday, July 11, 2026 • 9:00 am - 9:45 am',
     },
     {
-      id: 'connection-before-content',
+      id: 'calm-consistent-connected-july18',
+      name: 'Calm, Consistent, Connected Classrooms',
+      date: 'Saturday, July 18, 2026 • 9:00 am - 9:45 am',
+    },
+    {
+      id: 'connection-before-content-july11',
       name: 'Connection Before Content',
-      date: 'Saturday, July 18, 2026',
+      date: 'Saturday, July 11, 2026 • 10:00 am - 10:45 am',
     },
     {
-      id: 'leading-with-vision',
+      id: 'connection-before-content-july18',
+      name: 'Connection Before Content',
+      date: 'Saturday, July 18, 2026 • 10:00 am - 10:45 am',
+    },
+    {
+      id: 'leading-with-vision-july11',
       name: 'Leading with Vision',
-      date: 'Saturday, July 11, 2026',
+      date: 'Saturday, July 11, 2026 • 11:00 am - 11:45 am',
     },
     {
-      id: 'bringing-ela-to-life',
+      id: 'leading-with-vision-july18',
+      name: 'Leading with Vision',
+      date: 'Saturday, July 18, 2026 • 11:00 am - 11:45 am',
+    },
+    {
+      id: 'bringing-ela-to-life-july11',
       name: 'Bringing ELA to Life',
-      date: 'Saturday, July 18, 2026',
+      date: 'Saturday, July 11, 2026 • 12:00 pm - 12:45 pm',
+    },
+    {
+      id: 'bringing-ela-to-life-july18',
+      name: 'Bringing ELA to Life',
+      date: 'Saturday, July 18, 2026 • 12:00 pm - 12:45 pm',
     },
   ];
 
